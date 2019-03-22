@@ -20,7 +20,7 @@ Resources:
 ## Who created it?
 <blockquote cite="https://weblog.rubyonrails.org/2017/11/27/Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/">
   “Active Storage was extracted from Basecamp 3 by George Claghorn and yours truly. So not only is the framework already used in production, it was born from production. There’s that Extraction Design guarantee stamp alright!”<br/>
-<em><b><sub>DHH</sub></b>
+  <footer>– <a href="https://weblog.rubyonrails.org/2017/11/27/Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/">DHH</a>
 </blockquote> 
 
 ## How does it work?
