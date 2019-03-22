@@ -1,18 +1,18 @@
 # Active Storage:
 
 Resources:
-<br/>
+
 - <a href="https://weblog.rubyonrails.org/2017/11/27/Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/">
 Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/
-</a><br/>
+</a>
 - <a href="https://evilmartians.com/chronicles/rails-5-2-active-storage-and-beyond">rails-5-2-active-storage-and-beyond
 </a>
 
 ## Why does active storage exists?
 
 - Pains of managing cloud storage providers, authentication, and data operations (an extremely common use case)
-- Multiple packages for handling this existed in the form of Gems, many of which worked perfectly well, it was still a <br/>forced choice, forced configuration and external dependency in a system designed around the guiding principle of <br/>Convention over Configuration
-<br/>
+- Multiple packages for handling this existed in the form of Gems, many of which worked perfectly well, it was still a forced choice, forced configuration and external dependency in a system designed around the guiding principle of Convention over Configuration
+
 
 
 ##### If you want some examples of gem solutions here are the two most common:
@@ -21,18 +21,18 @@ Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/
 
 ## Who created it?
 <blockquote cite="https://weblog.rubyonrails.org/2017/11/27/Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/">
-  “Active Storage was extracted from Basecamp 3 by George Claghorn and yours truly. <br/>So not only is the framework already used in production, it was born from production. <br/>There’s that Extraction Design guarantee stamp alright!”
-<br/><b>- DHH</b>
+  “Active Storage was extracted from Basecamp 3 by George Claghorn and yours truly. So not only is the framework already used in production, it was born from production. There’s that Extraction Design guarantee stamp alright!”
+<b>- DHH</b>
 </blockquote> 
 
 ## Hwo does it work?
-##### Checkout the <a href="https://github.com/rails/rails/tree/master/activestorage">Acitve Storage Git</a><br/>
-#### A key difference to how Active Storage works compared to other attachment solutions in Rails is through the use <br/> of built-in models (backed by Active Record): 
+##### Checkout the <a href="https://github.com/rails/rails/tree/master/activestorage">Acitve Storage Git</a>
+#### A key difference to how Active Storage works compared to other attachment solutions in Rails is through the use  of built-in models (backed by Active Record): 
 1. <a href="https://api.rubyonrails.org/classes/ActiveStorage/Blob.html">Active storage blobs</a>
   have data about the file.
 2. <a href="https://api.rubyonrails.org/classes/ActiveStorage/Attachment.html">Active storage attachments</a> associate records with blobs.
-#### This means existing application models do not need to be modified with additional columns to associate <br/>with files. Active Storage uses polymorphic associations via the Attachment join model, which then connects to the <br/>actual Blob.<br/>
-  #### Blob models store attachment metadata (filename, content-type, etc.), and their identifier key in the storage <br/>service. **Blob models do not store the actual binary data.** They are intended to be immutable in spirit. <br/>One file, one blob. You can associate the same blob with multiple application models as well. <br/>And if you want to do transformations of a given Blob, the idea is that you'll simply create a new one, <br/>rather than attempt to mutate the existing one (though of course you can delete the previous version later <br/>if you don't need it).
+#### This means existing application models do not need to be modified with additional columns to associate with files. Active Storage uses polymorphic associations via the Attachment join model, which then connects to the actual Blob.
+  #### Blob models store attachment metadata (filename, content-type, etc.), and their identifier key in the storage service. **Blob models do not store the actual binary data.** They are intended to be immutable in spirit. One file, one blob. You can associate the same blob with multiple application models as well. And if you want to do transformations of a given Blob, the idea is that you'll simply create a new one, rather than attempt to mutate the existing one (though of course you can delete the previous version later if you don't need it).
 
 #### I'm confused where is my file? 
 ##### Not in the db. It's on a cloud service... that's kind of the whole point. However, during development, so long as your `config/storage.yml` is set up to use the disk service locally, you're file will be stored in the `./storage` directory or `.tmp/storage/` for testing. (An example `config/storage.yml` file can be found in the next section)
