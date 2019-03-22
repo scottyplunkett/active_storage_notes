@@ -67,7 +67,7 @@ google:
 
 ##### NOTE: You'll probably also need to install a gem for the providers you're using.
 ###### <a href="https://github.com/aws/aws-sdk-ruby">aws gem</a>
-######<a href="https://github.com/GoogleCloudPlatform/google-cloud-ruby/tree/master/google-cloud-storage">google cloud storage gem</a>
+###### <a href="https://github.com/GoogleCloudPlatform/google-cloud-ruby/tree/master/google-cloud-storage">google cloud storage gem</a>
 <hr/>
 ---
 #### These tables in `db/schema.rb` are set up for you in new projects. Run `rails active_storage:install` to copy over their migrations.
