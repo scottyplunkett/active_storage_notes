@@ -32,8 +32,7 @@ Resources:
 #### This means existing application models do not need to be modified with additional columns to associate with files. Active Storage uses polymorphic associations via the Attachment join model, which then connects to the actual Blob.
   #### Blob models store attachment metadata (filename, content-type, etc.), and their identifier key in the storage service. **Blob models do not store the actual binary data.** They are intended to be immutable in spirit. One file, one blob. You can associate the same blob with multiple application models as well. And if you want to do transformations of a given Blob, the idea is that you'll simply create a new one, rather than attempt to mutate the existing one (though of course you can delete the previous version later if you don't need it).
 
-##### I'm confused where is my file? 
-###### Not in the db. It's on a cloud service... that's kind of the whole point. However, during development, so long as your `config/storage.yml` is set up to use the disk service locally, you're file will be stored in the `./storage` directory or `.tmp/storage/` for testing. (An example `config/storage.yml` file can be found in the next section)
+###### _I'm confused where is my file?_ <br/>Not in the db. It's on a cloud service... that's kind of the whole point. However, during development, so long as your `config/storage.yml` is set up to use the disk service locally, you're file will be stored in the `./storage` directory or `.tmp/storage/` for testing. (An example `config/storage.yml` file can be found in the next section)
 
 
 ## How is it configured in a rails project?
