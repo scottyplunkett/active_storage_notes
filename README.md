@@ -2,9 +2,7 @@
 
 Resources:
 
-- <a href="https://weblog.rubyonrails.org/2017/11/27/Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/">
-Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/
-</a>
+- <a href="https://weblog.rubyonrails.org/2017/11/27/Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/">Rails-5-2-Active-Storage-Redis-Cache-Store-HTTP2-Early-Hints-Credentials/</a>
 - <a href="https://evilmartians.com/chronicles/rails-5-2-active-storage-and-beyond">rails-5-2-active-storage-and-beyond
 </a>
 
