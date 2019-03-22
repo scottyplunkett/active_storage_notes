@@ -69,6 +69,7 @@ google:
 ###### <a href="https://github.com/aws/aws-sdk-ruby">aws gem</a>
 ###### <a href="https://github.com/GoogleCloudPlatform/google-cloud-ruby/tree/master/google-cloud-storage">google cloud storage gem</a>
 <hr/>
+
 ---
 #### These tables in `db/schema.rb` are set up for you in new projects. Run `rails active_storage:install` to copy over their migrations.
 
@@ -117,7 +118,6 @@ end
 ```
 
 ---
-
 #### This in some controller action for a one-to-one relationship:
 `@lesson.video.attach(lesson_params[:video])`
 
@@ -160,8 +160,8 @@ class LessonsController < ApplicationController
     end
 end
 ```
----
 
+---
 #### Using with API-only apps
   - Wrap in form-data object 
 
