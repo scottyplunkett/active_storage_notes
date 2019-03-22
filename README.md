@@ -169,7 +169,7 @@ end
 // example submit function
 submit = (lesson, videos) => {
   const formData = new FormData();
-  videos.forEach(video => { formData.append('payload[]', video) });
+  videos.forEach(video => formData.append('payload[]', video));
   formData.append('files', true);
   LessonsAPI(lesson).post(formData)
     .then(videos => {
@@ -200,7 +200,7 @@ post: (url, data, options = { headers: {}}) => {
       body: body,
       ...options
     })
-  }
+ }
 ```
 
 
