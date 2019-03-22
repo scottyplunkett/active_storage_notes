@@ -161,7 +161,7 @@ end
 ```
 
 ---
-#### Using with API-only apps
+## Using with API-only apps
   - Wrap in form-data object 
 
 ```javascript
