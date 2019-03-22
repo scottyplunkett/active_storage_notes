@@ -23,7 +23,7 @@ Resources:
 <b>- DHH</b>
 </blockquote> 
 
-## Hwo does it work?
+## How does it work?
 ##### Checkout the <a href="https://github.com/rails/rails/tree/master/activestorage">Acitve Storage Git</a>
 #### A key difference to how Active Storage works compared to other attachment solutions in Rails is through the use  of built-in models (backed by Active Record): 
 1. <a href="https://api.rubyonrails.org/classes/ActiveStorage/Blob.html">Active storage blobs</a>
