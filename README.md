@@ -165,7 +165,8 @@ end
   - Wrap in form-data object 
 
 ```javascript
-// example submit function
+// LessonVideosForm component
+// example submit function called to upload file
 submit = (lesson, videos) => {
   const formData = new FormData();
   videos.forEach(video => formData.append('payload[]', video));
@@ -183,7 +184,8 @@ submit = (lesson, videos) => {
   - Watch out for POST request with the content-type header set
 
 ```javascript
-// related example post function in some request wrapper
+// RequestWrapper component
+// example post function
 post: (url, data, options = { headers: {}}) => {
     let body;
 
